@@ -35,14 +35,14 @@ So you can have the correct pin name
 
 PinOut (from up to down)
 
-VDD
-P00_0
-P00_1
-P00_9
-P00_11
-SWD
-SCLK
-GND
+* VDD
+* P00_0
+* P00_1
+* P00_9
+* P00_11
+* SWD
+* SCLK
+* GND
 
 Careful, in order to program this chip you need to select this target : Nordic nRF51822 in Keil Studio (So you have the correct target RAM size set, otherwise it will not work properly)
 
