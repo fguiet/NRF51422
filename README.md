@@ -1,4 +1,4 @@
-# NRF51422-SoC
+# NRF51422-SoC / NRF51822-Soc
 
 ## Context
 
