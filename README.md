@@ -84,6 +84,7 @@ nRF51822 with Serial Converter
 I made a RaspiOS image with my ARM Paker stuff
 I installed OpenOCD with my AWX Ansible stuff
 
+RaspberryPi Pinout : <https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio-pinout>
 
 Raspberry 4 with nRF51822
 -------------------------
