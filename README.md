@@ -168,6 +168,37 @@ wrote 128668 bytes from file /applications/hex/test_rpi4.hex in 10.453257s (12.0
 > reset
 ```
 
+## Consumption
+
+This simple program consume between 3.2uA and 3.6uA.
+
+Libraries used:
+
+* http://os.mbed.com/teams/Bluetooth-Low-Energy/code/BLE_API/
+* http://os.mbed.com/teams/Nordic-Semiconductor/code/nRF51822/
+* Mbed 2
+
+```c
+#include "mbed.h"
+#include "ble/BLE.h"
+
+void bleInitComplete(BLE::InitializationCompleteCallbackContext *params)
+{
+    BLE &ble          = params->ble;
+    ble_error_t error = params->error;
+}
+
+int main() {
+  //Init new BLE Instance 
+  BLE& ble = BLE::Instance(BLE::DEFAULT_INSTANCE);
+  ble.init(bleInitComplete);
+
+  while(true) {
+    ble.waitForEvent();
+  }
+}
+```
+
 ## References
 
 * [Eric Tsai Best project](https://www.hackster.io/erictsai/lora-tooth-small-ble-sensors-over-wifi-lora-gateways-0aa109)
